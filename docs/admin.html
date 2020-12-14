@@ -1,0 +1,195 @@
+<html>
+<head>
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Login | Clickclinic</title>
+<link rel="shortcut icon" href="assets/logo.PNG" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Garamond&display=swap" rel="stylesheet">
+<style>
+body {
+background: lineargradient(
+rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("assets/login.jpg");
+}
+#container {
+position: absolute;
+height: auto;
+width: 80%;
+left: 10%;
+top: 27%;
+background: rgba(255, 255, 255, 0.9);
+border: 1px solid transparent;
+border-radius: 0px;
+text-align: center;
+margin-bottom: 10%;
+}
+#form {
+position: absolute;
+width: 100%;
+height: 100%;
+}
+input {
+padding: 10px;
+font-size: 20px;
+margin: 10px 10px;
+width: 80%;
+outline: 0;
+border: 0px transparent;
+border-radius: 10px;
+font-family: "Garamond";
+}
+#logo {
+margin-top: 5px;
+width: 100px;
+height: 100px;
+margin-bottom: 10px;
+}
+p {
+font-family: "Garamond";
+}
+input[type="submit"] {
+margin-top: 25px;
+}
+input[type="submit"]:hover {
+opacity: 0.8;
+}
+#menu {
+position: absolute;
+width: 70%;
+top: 14%;
+left: 15%;
+text-align: center;
+}
+.b {
+width: 30%;
+padding: 8px;
+font-family: 'Garamond';
+outline: none;
+margin: 4px;
+border-radius: 4px;
+font-size: 17px;
+border: 0px solid transparent;
+}
+#food,
+#feedback,
+#money {
+text-align: center;
+position: relative;
+width: 100%;
+}
+thead {
+font-family: 'Garamond';
+font-size: 20px;
+}
+tbody {
+font-family: 'Garamond';
+}
+th {
+padding: 10px;
+}
+td {
+padding: 6px;
+}
+th,
+td {
+text-align: center;
+border: 1px solid black;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+border-radius: 10px;
+}
+ul {
+text-align: left;
+}
+</style>
+</head>
+<body>
+<header>
+<img style="height:100%;width:5%" src="assets/logo.png">
+<ul id="head_ul">
+<a href="Index.html">
+<li class="head_li">Home</li>
+</a>
+<a href="About.html">
+<li class="head_li">About us</li>
+</a>
+<a href="Donate.html">
+<li class="head_li">Donate</li>
+</a>
+<a href="Articles.html">
+<li class="head_li">Articles</li>
+</a>
+<a href="Login.html">
+<li class="head_li" style="background:black;color:blue;">Logout</li>
+</a>
+</ul>
+</header>
+<div id="menu"><button class="b" style="background: #00008B;color:white">Money Donation</button><button class="b" style="background: rgb(255, 255, 255);">
+Feedback</button></div>
+<div id="container">
+<div id="money">
+<table id="money_table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Company</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Address</th>
+<th>Donation Amount</th>
+</tr>
+</thead>
+</table>
+</div>
+<div id="feedback" style="display: none;">
+<table id="feed_table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Suggestions</th>
+</tr>
+</thead>
+</table>
+</div>
+</div>
+<footer>
+<div style="display: inline;">
+<span style="padding-top:15px;padding-left:15px;float: left;">Clickclinic © 2020 Website Designed & Maintenance By RS Techies</span>
+<div style="display: inline;float: right;margin-right: 30px;">
+<a href="https://www.facebook.com/unitednations/" class="fa fa-facebook"></a>
+<a href="https://twitter.com/UN?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter"></a>
+<a href="https://in.linkedin.com/company/unitednations"
+class="fa fa-linkedin"></a>
+<a href="https://www.instagram.com/unitednations" class="fa fa-instagram"></a>
+</div>
+</div>
+</footer>
+<script>
+$('.b').click(function() {
+$('.b').css({
+"background": "rgb(255, 255, 255)",
+"color": "black"
+})
+console.log($(this).text());
+if ($(this).text() == 'Money Donation') {
+$('#money').show();
+$('#feedback').hide();
+}
+
+if ($(this).text() == 'Feedback') {
+$('#money').hide();
+$('#feedback').show();
+
+}
+$(this).css({
+"background": "rgb(37, 164, 77)",
+"color": "rgb(255, 255, 255)"
+});
+});
+</script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
